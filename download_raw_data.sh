@@ -1,13 +1,5 @@
 #!/bin/bash
-##############################################
-# This script will check the links from the
-# FDA website and download new ASCII data files
-# if they dont already exist in the <datadir>.
-# This files depends in get_links.py to get all
-# of the FDA AERS data links.
-#
-# Usage: download.sh <datadir>
-##############################################
+
 python -c "import BeautifulSoup"
 if [ $? -ne 0 ]; then
   echo "Please install the BeautifulSoup Python module..."
