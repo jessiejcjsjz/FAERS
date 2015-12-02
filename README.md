@@ -8,13 +8,22 @@ This repo provides scripts to download, process, and analyze adverse event data 
 `sudo apt-get install sqlite`
 
 #### 2. Install [BeautifulSoup](https://pypi.python.org/pypi/BeautifulSoup/3.0.5)
-`sudo pip install BeautifulSoup` or `sudo apt-get install python-beautifulsoup`
+`sudo pip install BeautifulSoup`
+
+or
+
+`sudo apt-get install python-beautifulsoup`
 
 #### 3. Install [urllib2](https://docs.python.org/2/library/urllib2.html)
-`sudo pip install urllib3`or `sudo apt-get install python-urllib3`
+`sudo pip install urllib3`
+
+or
+
+`sudo apt-get install python-urllib3`
 
 #### 4. Download and import FDA data from [FDA AERS](http://www.fda.gov/Drugs/GuidanceComplianceRegulatoryInformation/Surveillance/AdverseDrugEffects/)
 `./download.sh`
+
 `./import_faers_data.sh`
 
 ## Questions/issies/contact
