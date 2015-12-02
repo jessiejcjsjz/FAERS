@@ -28,9 +28,9 @@ sqlite3 faers.db "${THER}"
 
 chmod +w faers.db
   
-for filename in zip/*.zip; do
+for filename in data/*.zip; do
   echo "`date`: beginning load for $filename"
-  unzip -o $filename -d zip/  
+  unzip -o $filename -d data/  
   find -name DRUG*TXT | xargs -I % sqlite3 faers.db -separator $ ".import '"%"' DRUG"
   find -name DEMO*TXT | xargs -I % sqlite3 faers.db -separator $ ".import '"%"' DEMO"
   find -name INDI*TXT | xargs -I % sqlite3 faers.db -separator $ ".import '"%"' INDI"
@@ -38,7 +38,7 @@ for filename in zip/*.zip; do
   find -name REAC*TXT | xargs -I % sqlite3 faers.db -separator $ ".import '"%"' REAC"
   find -name RPSR*TXT | xargs -I % sqlite3 faers.db -separator $ ".import '"%"' RPSR"
   find -name THER*TXT | xargs -I % sqlite3 faers.db -separator $ ".import '"%"' THER"
-  rm -rf ./zip/ascii
+  rm -rf ./data/ascii
 done;
 
 sqlite3 faers.db "DELETE FROM DRUG WHERE ISR = 'ISR'"
@@ -50,6 +50,6 @@ sqlite3 faers.db "DELETE FROM RPSR WHERE ISR = 'ISR'"
 sqlite3 faers.db "DELETE FROM THER WHERE ISR = 'ISR'"
 
 find -name *TXT -exec rm {} \;
-rm -rf ./zip/sgml
-rm -rf ./zip/sqml
-rm ./zip/README.doc
+rm -rf ./data/sgml
+rm -rf ./data/sqml
+rm ./data/README.doc

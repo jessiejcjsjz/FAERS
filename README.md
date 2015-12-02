@@ -26,5 +26,5 @@ or
 
 `./import_faers_data.sh`
 
-## Questions/issies/contact
+## Questions/issues/contact
 mlbernauer@gmail.com

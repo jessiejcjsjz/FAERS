@@ -19,20 +19,20 @@ if [ ! -e "get_links.py" ]; then
   exit
 fi
 
-if [ ! -d "zip/" ]; then
-  mkdir "zip/"
+if [ ! -d "data/" ]; then
+  mkdir "data/"
 fi
 
 python get_links.py > tmp.txt
 
-if [ "$(ls zip/)" ]; then
+if [ "$(ls data/)" ]; then
   echo "Directory is not empty"
-  CURRENT_FILES=$(ls zip/)
+  CURRENT_FILES=$(ls data/)
   NEW_FILES=$(grep -v -F "${CURRENT_FILES}" tmp.txt)
 else
   echo "Directory is empty; using tmp.txt"
   NEW_FILES=$(cat tmp.txt)  
 fi
 
-echo "${NEW_FILES}" | xargs -I % wget -P zip/ %
+echo "${NEW_FILES}" | xargs -I % wget -P data/ %
 rm tmp.txt
