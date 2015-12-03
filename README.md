@@ -21,12 +21,16 @@ or
 
 `sudo apt-get install python-urllib3`
 
-#### 4. Download and import FDA data from [FDA AERS](http://www.fda.gov/Drugs/GuidanceComplianceRegulatoryInformation/Surveillance/AdverseDrugEffects/)
+#### 4. Install [drugstandards](https://github.com/mlbernauer/drugstandards)
+`sudo pip install drugstandards`
+
+
+#### 6. Download and import FDA data from [FDA AERS](http://www.fda.gov/Drugs/GuidanceComplianceRegulatoryInformation/Surveillance/AdverseDrugEffects/)
 `./download_data.sh`
 
 `./import_faers_data.sh`
 
-#### 5. Standardize drug names
+#### 6. Standardize drug names
 `./standardize_drug_names.py`
 
 ## Questions/issues/contact

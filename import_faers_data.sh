@@ -43,6 +43,10 @@ sqlite3 faers.db "DELETE FROM REAC WHERE ISR = 'ISR'"
 sqlite3 faers.db "DELETE FROM RPSR WHERE ISR = 'ISR'"
 sqlite3 faers.db "DELETE FROM THER WHERE ISR = 'ISR'"
 
+# Create indices
+sqlite3 faers.db "CREATE INDEX drug_idx ON DRUG (ISR, DRUGNAME)"
+sqlite3 faers.db "CREATE INDEX reac_idx ON REAC (ISR, PT)"
+
 find -name *TXT -exec rm {} \;
 rm -rf ./data/sgml
 rm -rf ./data/sqml

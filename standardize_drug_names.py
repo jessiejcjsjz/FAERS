@@ -18,14 +18,14 @@ pre_counts_report.writerow(["TERM", "COUNT"])
 for i in pre_counts:
     pre_counts_report.writerow([i[0], i[1]])
 
-faers = [i[0] for i in conn.execute("SELECT DISTINCT(DRUGNAME) FROM DRUG").fetchall()]
+faers = [i[0] for i in conn.execute("SELECT DISTINCT(DRUGNAME) FROM DRUG").fetchall() if i[0] != None]
 print "Got unique list: n = %d" % len(faers)
 print "Standardizing drug names..."
 
-stand = drugs.standardize(faers[0:100], thresh=THRESH)
+stand = drugs.standardize(faers, thresh=THRESH)
 print "Finished standardizing drug names..."
 print "Updating table..."
-pairs = [(stand[i], faers[i]) for i in range(len(stand)) if stand[i] != None]
+pairs = [(stand[i], faers[i]) for i in range(len(stand)) if stand[i] != None and faers[i] != stand[i]]
 for i in pairs:
     try:
         n = int(conn.execute("SELECT COUNT(*) FROM DRUG WHERE DRUGNAME = '%s'" % i[1]).fetchone()[0])
