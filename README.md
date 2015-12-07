@@ -31,7 +31,7 @@ or
 `./import_faers_data.sh`
 
 #### 6. Standardize drug names
-`./standardize_drug_names.py`
+`./create_drug_map.py`
 
 ## Questions/issues/contact
 mlbernauer@gmail.com
