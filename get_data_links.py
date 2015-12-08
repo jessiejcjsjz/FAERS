@@ -1,15 +1,4 @@
 #!/usr/bin/python
-#########################################################
-# Michael Bernauer
-# 2014/12/22
-# Run this script to retrieve data from the FDA
-# FAERS website. This will download all into a folder
-# called "faers_data" located in the current directory.
-#
-# Running the script: ./faers_data_retriever.py
-#
-#########################################################
-
 
 from BeautifulSoup import *
 import urllib2
