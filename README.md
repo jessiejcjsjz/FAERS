@@ -25,7 +25,7 @@ or
 `sudo pip install drugstandards`
 
 
-#### 6. Download and import FDA data from [FDA AERS](http://www.fda.gov/Drugs/GuidanceComplianceRegulatoryInformation/Surveillance/AdverseDrugEffects/)
+#### 5. Download and import FDA data from [FDA AERS](http://www.fda.gov/Drugs/GuidanceComplianceRegulatoryInformation/Surveillance/AdverseDrugEffects/)
 `./download_data.sh`
 
 `./import_faers_data.sh`
