@@ -1,6 +1,7 @@
 # FDA Adverse Event Reporting System
 
 This repo provides scripts to download, process, and analyze adverse event data from the [FDA Adverse Event Reporting System](http://www.fda.gov/Drugs/GuidanceComplianceRegulatoryInformation/Surveillance/AdverseDrugEffects/). The data is stored in a [SQLite](https://www.sqlite.org/) database.
+Analysis is carried out using the [faers](https://github.com/mlbernauer/faerslib) library.
 
 ## Instructions
 
